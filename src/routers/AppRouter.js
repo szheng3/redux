@@ -7,6 +7,7 @@ import ContactPage from '../components/ContactPage';
 import PortfolioItemPage from '../components/PortfolioItemPage';
 import PortfolioPage from '../components/PortfolioPage';
 import CreateEssay from "../components/CreateEssay";
+import ReadPage from "../components/ReadPage";
 
 const AppRouter = () => (
   <BrowserRouter>
@@ -17,6 +18,7 @@ const AppRouter = () => (
         <Route path="/portfolio" component={PortfolioPage} exact={true} />
           <Route path="/create" component={CreateEssay} exact={true}/>
         <Route path="/portfolio/:id" component={PortfolioItemPage} />
+          <Route path="/read" component={ReadPage}/>
         <Route path="/contact" component={ContactPage} />
         <Route component={NotFoundPage} />
       </Switch>

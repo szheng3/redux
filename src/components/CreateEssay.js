@@ -9,7 +9,7 @@ const CreateEssay = (props) => {
             <EssayForm onSubmit={(essay) => {
                 console.log(essay);
                 props.dispatch(AddEssay(essay));
-                props.history.push("/");
+                props.history.push("/read");
             }}/>
 
         </div>

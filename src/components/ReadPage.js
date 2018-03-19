@@ -12,11 +12,11 @@ const ReadPage = (props) => {
     );
 };
 
-function mapStateToProps(state) {
+const mapStateToProps = (state) => {
     return {
         essay: state.essay
     };
-}
+};
 
 export default connect(
     mapStateToProps,

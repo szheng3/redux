@@ -5,7 +5,10 @@ import EssayForm from "./EssayForm";
 const CreateEssay = (props) => {
     return (
         <div>
-            <EssayForm/>
+            <EssayForm onSubmit={(essay) => {
+                console.log(essay);
+                props.history.push("/");
+            }}/>
 
         </div>
     );

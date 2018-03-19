@@ -10,10 +10,18 @@ class EssayForm extends Component {
 
     };
 
+    onSubmit = (e) => {
+        e.preventDefault();
+
+        this.props.onSubmit(this.state);
+
+
+    };
+
     render() {
         return (
             <div>
-                <form>
+                <form onSubmit={this.onSubmit}>
                     <input onChange={(e) => {
                         const title = e.target.value;
                         this.setState(() => {

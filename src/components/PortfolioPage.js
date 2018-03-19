@@ -7,8 +7,7 @@ const PortfolioPage = (props) => (
         <h1>My Work</h1>
         <p>Checkout the stuff I've done:</p>
         <button onClick={(e) => {
-            console.log('sss');
-            props.history.push('/');
+            props.history.push('/portfolio/1');
         }}>test
         </button>
         <Link to="/portfolio/1">Item One</Link>

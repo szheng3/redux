@@ -3,16 +3,20 @@ import {connect} from 'react-redux';
 
 class EssayForm extends Component {
 
-    state = {
-        title: '',
-        content: '',
-        date: ''
+    constructor(props) {
+        super(props);
+        this.state = {
+            title: '',
+            content: '',
+            date: ''
 
-    };
+        };
+    }
+
+
 
     onSubmit = (e) => {
         e.preventDefault();
-
         this.props.onSubmit(this.state);
 
 
@@ -53,7 +57,9 @@ class EssayForm extends Component {
 }
 
 function mapStateToProps(state) {
-    return {};
+    return {
+        essay: state.essay
+    };
 }
 
 export default connect(

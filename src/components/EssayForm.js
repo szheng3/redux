@@ -16,7 +16,7 @@ class EssayForm extends Component {
                 <form>
                     <input onChange={(e) => {
                         const title = e.target.value;
-                        this.setState((state) => {
+                        this.setState(() => {
                             return {
                                 title
                             }

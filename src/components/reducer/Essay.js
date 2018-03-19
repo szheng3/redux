@@ -7,6 +7,11 @@ export default (state = [], action) => {
                 ...state,
                 action.essay
             ];
+        case 'UPDATE_ESSAY':
+            return [
+                state.filter(value => value.id !== action.essay.id),
+                action.essay
+            ];
         default:
             return state;
 

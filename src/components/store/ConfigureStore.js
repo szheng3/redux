@@ -5,7 +5,7 @@ import expensesReducer from '../reducer/Essay';
 const configureStore = () => {
     return createStore(
         combineReducers({
-            expenses: expensesReducer,
+            essay: expensesReducer,
 
         })
     );

@@ -19,3 +19,10 @@ export const UpdateEssay = (essay) => ({
     essay
 
 });
+
+export const DeleteEssay = (id) => ({
+
+    type: "DELETE_ESSAY",
+    id
+
+});

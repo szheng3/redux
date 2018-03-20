@@ -1,5 +1,6 @@
 import React from 'react';
 import {connect} from 'react-redux';
+import {DeleteEssay} from "./actions/Essay";
 
 const ReadPage = (props) => {
     return (
@@ -10,10 +11,18 @@ const ReadPage = (props) => {
                     <div key={value.id}>
                         <p>{value.title}</p>
                         <h1>{value.content}</h1>
-                        <button onClick={(e) => {
-                            props.history.push(`/update/${value.id}`);
-                        }}>
+                        <button
+                            onClick={(e) => {
+                                props.history.push(`/update/${value.id}`);
+                            }}>
                             Update
+                        </button>
+                        <button
+                            onClick={(e) => {
+                                props.dispatch(DeleteEssay(value.id));
+                            }}
+                        >
+                            delete
                         </button>
                     </div>
                 )

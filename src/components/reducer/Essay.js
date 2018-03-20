@@ -14,7 +14,7 @@ export default (state = [], action) => {
 
 
                     return {
-                        ...state,
+                        ...value,
                         ...action.essay
                     };
 
@@ -26,6 +26,9 @@ export default (state = [], action) => {
                 }
 
             });
+        case "DELETE_ESSAY":
+            return state.filter(value => value.id !== action.id);
+
         default:
             return state;
 

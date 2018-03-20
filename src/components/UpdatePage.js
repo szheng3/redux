@@ -8,9 +8,8 @@ const UpdatePage = (props) => {
         <div>
             <EssayForm
                 onSubmit={(essay) => {
-                    console.log('fuuuuuu');
-                    console.log(essay);
-                    props.dispatch(UpdateEssay(essay))
+                    props.dispatch(UpdateEssay(essay));
+                    props.history.push("/read");
                 }}
                 {...props}
             />

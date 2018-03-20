@@ -6,15 +6,17 @@ const ReadPage = (props) => {
         <div>
 
             {props.essay.map(value =>
-                <div key={value.id}>
-                    <p>{value.title}</p>
-                    <h1>{value.content}</h1>
-                    <button onClick={(e) => {
-                        props.history.push(`/update/${value.id}`);
-                    }}>
-                        Update
-                    </button>
-                </div>
+                (
+                    <div key={value.id}>
+                        <p>{value.title}</p>
+                        <h1>{value.content}</h1>
+                        <button onClick={(e) => {
+                            props.history.push(`/update/${value.id}`);
+                        }}>
+                            Update
+                        </button>
+                    </div>
+                )
             )}
 
         </div>

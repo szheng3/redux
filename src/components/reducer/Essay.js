@@ -12,9 +12,12 @@ export default (state = [], action) => {
             return state.map(value => {
                 if (value.id === action.essay.id) {
 
-                    return (
-                        action.essay
-                    );
+
+                    return {
+                        ...state,
+                        ...action.essay
+                    };
+
 
                 } else {
 

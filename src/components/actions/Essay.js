@@ -1,11 +1,11 @@
 import uuid from 'uuid/v4';
 
 
-export const AddEssay = ({id = uuid(), title, content, date}) => ({
+export const AddEssay = ({id, title, content, date}) => ({
 
     type: "ADD_ESSAY",
     essay: {
-        id,
+        id:uuid(),
         title,
         content,
         date

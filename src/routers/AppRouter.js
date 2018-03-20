@@ -21,7 +21,7 @@ const AppRouter = () => (
                 <Route path="/portfolio/:id" component={PortfolioItemPage}/>
                 <Route path="/read" component={ReadPage}/>
                 <Route path="/contact" component={ContactPage}/>
-                <Route path="/update" component={UpdatePage}/>
+                <Route path="/update/:id" component={UpdatePage}/>
                 <Route component={NotFoundPage}/>
             </Switch>
         </div>

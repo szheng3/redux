@@ -6,9 +6,10 @@ class EssayForm extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            title: '',
-            content: '',
-            date: ''
+            id:props.essay?props.essay.id:"",
+            title: props.essay?props.essay.title:"",
+            content: props.essay?props.essay.content:"",
+            date:props.essay?props.essay.date: ""
 
         };
     }
@@ -26,7 +27,9 @@ class EssayForm extends Component {
         return (
             <div>
                 <form onSubmit={this.onSubmit}>
-                    <input onChange={(e) => {
+                    <input
+                        value={this.state.title}
+                        onChange={(e) => {
                         const title = e.target.value;
                         this.setState(() => {
                             return {
@@ -34,14 +37,18 @@ class EssayForm extends Component {
                             }
                         });
                     }}/>
-                    <input onChange={(e) => {
+                    <input
+                        value={this.state.content}
+                        onChange={(e) => {
                         const content = e.target.value;
                         this.setState(() => ({
                             content
                         }));
 
                     }}/>
-                    <input onChange={(e) => {
+                    <input
+                        value={this.state.date}
+                        onChange={(e) => {
                         const date = e.target.value;
 
                         this.setState(() => ({
@@ -56,12 +63,6 @@ class EssayForm extends Component {
     }
 }
 
-function mapStateToProps(state) {
-    return {
-        essay: state.essay
-    };
-}
 
-export default connect(
-    mapStateToProps,
-)(EssayForm);
+
+export default EssayForm;
